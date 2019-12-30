@@ -1,4 +1,6 @@
 import { Component } from '@angular/core';
+import { NavController} from '@ionic/angular';
+import { DespesaPage } from './../despesa/despesa.page';
 
 @Component({
   selector: 'app-tab2',

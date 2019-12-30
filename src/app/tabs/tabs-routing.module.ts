@@ -48,6 +48,11 @@ const routes: Routes = [
     path: '',
     redirectTo: '/tabs/tab1',
     pathMatch: 'full'
+  },
+  {
+    path: 'despesa',
+    redirectTo: 'app-despesa',
+    pathMatch: 'full'
   }
 ];
 

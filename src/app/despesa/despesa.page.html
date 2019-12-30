@@ -1,0 +1,24 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>despesa</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  
+   <h3> Adicione a despesa do dia</h3>
+   Nome: <input type="text" [(ngModel)]="nome"><br>
+   Valor: <input type="text" [(ngModel)]="valor"><br>
+
+   <ion-item>
+    <ion-label>Categoria</ion-label>
+    <ion-select placeholder="selecione categoria do gasto">
+      <ion-select-option value="saude">saúde</ion-select-option>
+      <ion-select-option value="alimentacao">alimentação</ion-select-option>
+      <ion-select-option value="mercado">mercado</ion-select-option>
+    </ion-select>
+  </ion-item>
+
+   <ion-button expand="block">Block Button</ion-button>
+
+</ion-content>

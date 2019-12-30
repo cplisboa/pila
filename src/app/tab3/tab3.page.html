@@ -1,9 +1,37 @@
 <ion-header>
   <ion-toolbar>
     <ion-title>
-      Tab Three
+      Cadastro de categorias
     </ion-title>
   </ion-toolbar>
 </ion-header>
 
-<ion-content></ion-content>
+<ion-content>
+  <select [id]="categoria" >
+    <option *ngFor="let categoria of categorias" [value]="categoria.id" [selected]="selecionada">{{categoria.nome}}</option>
+  </select>
+
+  <form (ngSubmit)="salvar()">
+    <ion-item>
+      <ion-label>Nome</ion-label>
+      <ion-input type="text" [(ngModel)]="nova.nome" name="nome"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label>Cor</ion-label>
+      <ion-textarea [(ngModel)]="nova.cor" name="cor"></ion-textarea>
+    </ion-item>
+    <ion-item>
+      <ion-button ionicColorPicker
+          [colors]="['#C0392B', '#E74C3C', '#9B59B6', '#8E44AD', '#2980B9', '#3498DB', '#1ABC9C', '#16A085', '#27AE60', '#2ECC71']"
+          [position]="'bottom'"
+          (onColorPickerOpen)="eventOccur($event)"
+          (onColorPickerClose)="eventOccur($event)"
+          (onColorChange)="eventOccur($event)">
+          escolha a cor
+      </ion-button>
+    </ion-item>
+    ]
+    <button ion-button type="submit" block>Salvar Categoria</button>
+  </form>
+
+</ion-content>

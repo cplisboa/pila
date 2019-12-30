@@ -1,5 +1,7 @@
 {
   "name": "pila",
-  "integrations": {},
+  "integrations": {
+    "cordova": {}
+  },
   "type": "angular"
 }

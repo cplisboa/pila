@@ -7,6 +7,18 @@ import { Component } from '@angular/core';
 })
 export class Tab3Page {
 
+  public categorias = [{id: 1, nome: 'saude'},
+                      {id: 2, nome : 'alimentacao'},
+                      {id: 3, nome : 'educacao'} ];
+
+  public selecionada: any;
+  public nova = {};
+
+  salvar() {
+    console.log('Salvo');
+  }
+
+
   constructor() {}
 
 }
