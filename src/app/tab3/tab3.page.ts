@@ -1,4 +1,6 @@
 import { Component } from '@angular/core';
+import { AngularFireDatabase } from '@angular/fire/database';
+
 
 @Component({
   selector: 'app-tab3',
@@ -13,12 +15,16 @@ export class Tab3Page {
 
   public selecionada: any;
   public nova = {};
+  public items: any;
+
+  constructor(afDB: AngularFireDatabase) {
+    this.items = afDB.list('categoria').valueChanges();
+    console.log('Items: ' + this.items);
+  }
 
   salvar() {
     console.log('Salvo');
   }
 
-
-  constructor() {}
 
 }

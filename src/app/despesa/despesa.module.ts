@@ -18,5 +18,5 @@ import { DespesaPage } from './despesa.page';
   declarations: [DespesaPage]
 })
 export class DespesaPageModule {
-    //colocando comentário
+
 }

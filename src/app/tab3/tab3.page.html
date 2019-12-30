@@ -20,17 +20,12 @@
       <ion-label>Cor</ion-label>
       <ion-textarea [(ngModel)]="nova.cor" name="cor"></ion-textarea>
     </ion-item>
-    <ion-item>
-      <ion-button ionicColorPicker
-          [colors]="['#C0392B', '#E74C3C', '#9B59B6', '#8E44AD', '#2980B9', '#3498DB', '#1ABC9C', '#16A085', '#27AE60', '#2ECC71']"
-          [position]="'bottom'"
-          (onColorPickerOpen)="eventOccur($event)"
-          (onColorPickerClose)="eventOccur($event)"
-          (onColorChange)="eventOccur($event)">
-          escolha a cor
-      </ion-button>
-    </ion-item>
-    ]
+  	<ion-list>
+      <ion-item class="text" *ngFor="let item of items | async">
+        {{item | json}}
+      </ion-item>
+    </ion-list>
+
     <button ion-button type="submit" block>Salvar Categoria</button>
   </form>
 
