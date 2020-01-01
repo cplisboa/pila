@@ -16,14 +16,17 @@ export class Tab3Page {
   public selecionada: any;
   public nova = {};
   public items: any;
+  public catList: any;
 
   constructor(afDB: AngularFireDatabase) {
+    this.catList = afDB.list('categoria');
     this.items = afDB.list('categoria').valueChanges();
     console.log('Items: ' + this.items);
   }
 
   salvar() {
-    console.log('Salvo');
+    this.catList.push(this.nova);
+
   }
 
 
